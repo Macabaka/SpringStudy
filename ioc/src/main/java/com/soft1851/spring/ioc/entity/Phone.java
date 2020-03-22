@@ -1,7 +1,7 @@
 package com.soft1851.spring.ioc.entity;
 
 /**
- * @author dyf
+ * @author Jack
  */
 public class Phone {
     private String brand;
