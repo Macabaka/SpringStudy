@@ -4,16 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--    通过set方法进行传参-->
-    <bean id="phone1" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iPhone11" p:price="6666"/>
-    <bean id="phone2" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iPhoneXS" p:price="8888"/>
+    <bean id="phone1" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Phone" p:brand="iPhone11" p:price="6666"/>
+    <bean id="phone2" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Phone" p:brand="iPhoneXS" p:price="8888"/>
 <!--    通过构造方法进行传参-->
-    <bean id="phone3" class="com.soft1851.spring.ioc.entity.Phone">
+    <bean id="phone3" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Phone">
         <constructor-arg value="诺基亚"></constructor-arg>
         <constructor-arg value="1000"></constructor-arg>
     </bean>
 
 
-    <bean id="student1" class="com.soft1851.spring.ioc.entity.Student">
+    <bean id="student1" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Student">
     <property name="id" value="1001"/>
     <property name="name" value="Tom"/>
     <property name="hobbies">
@@ -30,7 +30,7 @@
             </list>
         </property>
     </bean>
-    <bean id="student2" class="com.soft1851.spring.ioc.entity.Student">
+    <bean id="student2" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Student">
         <property name="id" value="1002"/>
         <property name="name" value="Tom"/>
         <property name="hobbies">
@@ -47,7 +47,7 @@
             </list>
         </property>
     </bean>
-    <bean id="grade" class="com.soft1851.spring.ioc.entity.Grade">
+    <bean id="grade" class="com.soft1851.spring.ioc.com.soft1851.spring.mybatis.entity.Grade">
         <property name="name" value="soft1851"></property>
         <property name="students">
             <map>

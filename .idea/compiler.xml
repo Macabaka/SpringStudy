@@ -7,10 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springMVC-annoation" />
         <module name="ioc" />
         <module name="web" />
-        <module name="orm" />
         <module name="aop" />
+        <module name="mybatis-xml" />
+        <module name="orm" />
       </profile>
     </annotationProcessing>
   </component>
