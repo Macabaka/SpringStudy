@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>topic页面</title>
+</head>
+<style type="text/css">
+    *,
+    :after,
+    before{
+        box-sizing: border-box;
+    }
+    header{
+        height: 55px;
+        border-bottom:2px solid #eee;
+        display: flex;
+        align-items: center;
+    }
+    .header-img
+    {
+        height: 100%;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .banner{
+        height: 100%;
+        margin-top: 30px;
+    }
+    .banner img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .author{
+        color:#FFF;
+        font-size: 20px;
+        position: relative;
+        top: -65px;
+        float:right;
+        padding-right: 30px;
+    }
+
+    .row{
+        width: 100%;
+        height: 340px;
+        margin-bottom: 30px;
+        margin-top: 80px;
+        display: flex;
+        flex: 0 0 23%
+    }
+
+    .box{
+        margin-top: 10px;
+        height: 100%;
+        background: rgb(247, 247, 247);
+        border:1px solid #eee;
+        border-radius: 10px;
+        margin-right:25px;
+        display: flex;
+        flex:0 0 25%;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+
+    .box-img{
+        width: 50%;
+        height:34%;
+        border-radius: 100px;
+        text-align: center;
+        position:relative;
+        top:-12%;
+    }
+    .pos{
+        position: relative;
+        top:-50px;
+    }
+    .small-introduce{
+        width: 60%;
+        font-size: 12px;
+        margin-top: -10px;
+    }
+    .last{
+        width:60%;
+        font-size: 12px;
+        margin-top: -30px;
+    }
+
+    .btn{
+        width: 100px;
+        height: 40px;
+        background: #3db922;
+        border:none;
+        border-radius: 30px;
+        color:#FFF;
+        font-size: 16px;
+    }
+    .big-introduce{
+        width: 80%;
+        font-size:14px;
+        margin-top: -35px;
+        margin-bottom: 20px;
+    }
+
+    .small-line{
+        width: 60%;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        top:-40px;
+        left: 40px;
+    }
+    .big-btn{
+        width: 35%;
+        height: 40px;
+        background: rgb(165, 165, 165);
+        border:none;
+        border-radius: 30px;
+        color:#FFF;
+        font-size: 16px;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .below-btn{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .text-pos1
+    {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        margin-right:1%;
+        font-size: 20px;
+        position:relative;
+        right:-60%
+
+    }
+    .text-pos2{
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        font-size: 20px;
+        margin-right:5%;
+        position: relative;
+        right:-5%
+    }
+
+
+
+    @media only screen and (min-width:1200px) {
+        .col-xl-3 {
+            flex: 0 0 25%;
+        }
+    }
+</style>
+<body>
+<div class="container ">
+    <div class="row">
+        <div class="box" th:each="topic:${topics}">
+            <img src="" class="box-img" >
+            <h2 class="pos"  th:text="${topic.getTopicName()}" ></h2>
+            <p class="small-introduce pos" th:text="${topic.getDescription()}"></p>
+<!--            <button type="button" class="btn pos">关注</button>-->
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
